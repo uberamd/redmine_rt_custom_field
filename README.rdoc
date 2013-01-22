@@ -1,3 +1,7 @@
-= url_custom_field
+= rt_custom_field
 
-Description goes here
+This is a custom field for Redmine that creates a field capable of directly linking 
+to an RT Ticket. At this point it's nothing exciting, however in the future it will 
+have a settings page to allow for setting a custom RT instance URL.
+
+Steve Morrissey
