@@ -14,7 +14,7 @@ class RtCustomFieldFormat < Redmine::CustomFieldFormat
   include ActionView::Helpers::TagHelper
 
   def format_as_rt(value)
-    auto_link h(value)
+    link_to(value, "https://rt.d.umn.edu/rt/Ticket/Display.html?id=" + value)
   end
 
   def escape_html?
