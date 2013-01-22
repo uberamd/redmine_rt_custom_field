@@ -27,5 +27,5 @@ class RtCustomFieldFormat < Redmine::CustomFieldFormat
 end
 
 Redmine::CustomFieldFormat.map do |fields|
-  fields.register RtCustomFieldFormat.new('rt', :label => "RT", :order => 8)
+  fields.register RtCustomFieldFormat.new('rt', :label => :label_rt, :order => 8)
 end
