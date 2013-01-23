@@ -10,3 +10,4 @@ There are 2 options under Administration > Plugins > Configure:
 * Path to your RT install (https://your.rt.server.com/)
 * Whether or not to open RT links in a new window
 
+Plugin can be found here: http://www.redmine.org/plugins/redmine_rt_custom_field
