@@ -10,7 +10,8 @@ Redmine::Plugin.register :redmine_rt_custom_field do
 
   settings :partial => 'settings/redmine_rt_custom_field_settings',
     :default => {
-      'rt_url' => 'http://path.to.your.rt.com/',
+      'rt_url' => 'http://path.to.rt.com/',
+      'new_window' => 'true', 
     }
 end
 
@@ -19,7 +20,13 @@ class RtCustomFieldFormat < Redmine::CustomFieldFormat
   include ActionView::Helpers::TagHelper
 
   def format_as_rt(value)
-    ActionController::Base.helpers.link_to(value, Setting.plugin_redmine_rt_custom_field['rt_url'] + "Ticket/Display.html?id=" + value)
+    if Setting.plugin_redmine_rt_custom_field['new_window'] == "true"
+      target = 'blank'
+    else
+      target = ''
+    end
+    
+    ActionController::Base.helpers.link_to(value, Setting.plugin_redmine_rt_custom_field['rt_url'] + "Ticket/Display.html?id=" + value, :target => target)
   end
 
   def escape_html?
