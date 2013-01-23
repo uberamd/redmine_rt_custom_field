@@ -4,7 +4,7 @@ Redmine::Plugin.register :redmine_rt_custom_field do
   name 'RT num to ticket'
   author 'Steve Morrissey'
   description 'Allows linking of a field to a RT ticket'
-  version '0.0.4'
+  version '0.0.5'
 
   requires_redmine :version_or_higher => '0.9.0'
 
@@ -19,7 +19,7 @@ class RtCustomFieldFormat < Redmine::CustomFieldFormat
   include ActionView::Helpers::TagHelper
 
   def format_as_rt(value)
-    ActionController::Base.helpers.link_to(value, "https://rt.d.umn.edu/rt/Ticket/Display.html?id=" + value)
+    ActionController::Base.helpers.link_to(value, Setting.plugin_redmine_rt_custom_field['rt_url'] + "Ticket/Display.html?id=" + value)
   end
 
   def escape_html?
