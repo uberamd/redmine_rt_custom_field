@@ -4,7 +4,7 @@ Redmine::Plugin.register :redmine_rt_custom_field do
   name 'RT num to ticket'
   author 'Steve Morrissey'
   description 'Allows linking of a field to a RT ticket'
-  version '0.0.5'
+  version '0.1.0'
 
   requires_redmine :version_or_higher => '0.9.0'
 

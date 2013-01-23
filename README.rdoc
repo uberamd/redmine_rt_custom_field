@@ -1,7 +1,12 @@
-= rt_custom_field
+= Redmine Plugin: rt_custom_field
 
 This is a custom field for Redmine that creates a field capable of directly linking 
-to an RT Ticket. At this point it's nothing exciting, however in the future it will 
-have a settings page to allow for setting a custom RT instance URL.
+to a BestPractical RT Ticket. At this point it's nothing exciting, simply add a custom
+field in Redmine of type RT then assign that field to a bug/feature tracker. Then,
+upon issue ticket creation, if the user pastes in an RT ticket number it'll create a
+simple link to view that ticket.
 
-Steve Morrissey
+There are 2 options under Administration > Plugins > Configure:
+* Path to your RT install (https://your.rt.server.com/)
+* Whether or not to open RT links in a new window
+
