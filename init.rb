@@ -7,6 +7,11 @@ Redmine::Plugin.register :redmine_rt_custom_field do
   version '0.0.3'
 
   requires_redmine :version_or_higher => '0.9.0'
+
+  settings :partial => 'settings/redmine_rt_custom_field_settings',
+    :default => {
+      'rt_url' => 'http://path.to.your.rt.com/',
+    }
 end
 
 class RtCustomFieldFormat < Redmine::CustomFieldFormat
