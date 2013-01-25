@@ -16,13 +16,21 @@ Plugin can be found here: http://www.redmine.org/plugins/redmine_rt_custom_field
 
 To install this plugin:
 
-* clone into your plugins dir: ```git://github.com/uberamd/redmine_rt_custom_field.git```
-* `rake redmine:plugins:migrate RAILS_ENV=production`
-* Restart Apache/Nginx/etc. `invoke-rc.d apache2 restart`
+* Clone into your plugins dir: 
+```bash
+git://github.com/uberamd/redmine_rt_custom_field.git
+```
+* Rake
+```bash
+rake redmine:plugins:migrate RAILS_ENV=production
+```
+* Restart Apache/Nginx/etc. 
 * Configure from Administration > Plugins
 * Create custom field of type RT
 * Add custom field to tracker
 
 == Removal
 
-```rake redmine:plugins:migrate NAME=redmine_rt_custom_field VERSION=0 RAILS_ENV=production```
+```bash 
+rake redmine:plugins:migrate NAME=redmine_rt_custom_field VERSION=0 RAILS_ENV=production
+```
