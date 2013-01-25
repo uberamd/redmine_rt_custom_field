@@ -16,8 +16,8 @@ Plugin can be found here: http://www.redmine.org/plugins/redmine_rt_custom_field
 
 To install this plugin:
 
-* Clone into your plugins dir: git://github.com/uberamd/redmine_rt_custom_field.git
-* Rake rake redmine:plugins:migrate RAILS_ENV=production
+* Clone into your plugins dir: git clone git://github.com/uberamd/redmine_rt_custom_field.git
+* Rake to install plugin: rake redmine:plugins:migrate RAILS_ENV=production
 * Restart Apache/Nginx/etc. 
 * Configure from Administration > Plugins
 * Create custom field of type RT
@@ -25,4 +25,4 @@ To install this plugin:
 
 == Removal
 
-rake redmine:plugins:migrate NAME=redmine_rt_custom_field VERSION=0 RAILS_ENV=production
+Rake to remove plugin: rake redmine:plugins:migrate NAME=redmine_rt_custom_field VERSION=0 RAILS_ENV=production
