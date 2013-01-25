@@ -12,17 +12,17 @@ There are 2 options under Administration > Plugins > Configure:
 
 Plugin can be found here: http://www.redmine.org/plugins/redmine_rt_custom_field
 
-## Installation
+== Installation
 
 To install this plugin:
 
-* clone into your plugins dir: `git://github.com/uberamd/redmine_rt_custom_field.git`
+* clone into your plugins dir: ```git://github.com/uberamd/redmine_rt_custom_field.git```
 * `rake redmine:plugins:migrate RAILS_ENV=production`
 * Restart Apache/Nginx/etc. `invoke-rc.d apache2 restart`
 * Configure from Administration > Plugins
 * Create custom field of type RT
 * Add custom field to tracker
 
-## Removal
+== Removal
 
-`rake redmine:plugins:migrate NAME=redmine_rt_custom_field VERSION=0 RAILS_ENV=production`
+```rake redmine:plugins:migrate NAME=redmine_rt_custom_field VERSION=0 RAILS_ENV=production```
