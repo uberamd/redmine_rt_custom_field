@@ -35,7 +35,7 @@ class RtCustomFieldFormat < Redmine::CustomFieldFormat
   end
 
   def edit_as
-   "integer"
+   "string"
   end
 end
 
